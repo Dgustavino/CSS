@@ -1,0 +1,44 @@
+/* Herencia: Se aplica con el valor inherit, esto obliga al elemento a heredar la propiedad de su elemento más cercano */
+
+/* Cascada: Es el orden en el que se aplican los estilos al ir leyendo el css. Los estilos que vienen despues sobreescriben a los anteriores. */
+
+/* Especifidad: Es el peso que tiene un selector cuando hay conflicto de estilos */
+
+/* La w3c divide la especifidad en: */
+/*  Etiqueta -> 1
+    Clases y pseudoclases -> 10
+    Id -> 100
+    Estilos en línea -> 1000
+    !important -> Gana a todo;
+
+    important -> especificidad -> cascada
+*/
+
+/* Peso de 100 */
+#parrafo{
+    color: blueviolet;
+}
+
+/* Peso de 10 */
+.parrafo{
+    color: red;
+}
+
+/* Peso de 1 */
+/* inherit coge el color de su padre */
+a{
+    color: inherit;
+}
+
+.parrafo-2{
+    color: black;
+}
+
+/* Peso de 1 */
+p{
+    color: green;
+}
+
+/* Por eso es importante y recomendable utilizar clases para dar estilos, asi no tendremos problemas de especifidad */
+
+/* Los !important se utilizan mucho en Boostrap, por eso dá tantos conflictos. */

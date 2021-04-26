@@ -1,0 +1,17 @@
+                            FLEX BOX = Caja Flexible
+
+-Es un modelo de layout que permite que las cajas sean flexibles, es un valor de la propiedad display
+-Existe display:flex y display:inline-flex para que el contenedor sea de bloque y de linea respectivamente.
+-Se necesita un contenedor(flex-container) y al menos un hijo(flex-item) y los hijos pueden tener mas hijos.
+-Los after y before de un flex-item, se consideran flexibles.Los textos tambien.
+-Las cajas flexibles son los items, el contenedor es el contexto al que pertenecen los items.
+
+EJES
+-Por defecto el eje principal es horizontal: de Izq-Der, y el eje secundario es vertical: de Arriba-Abajo.
+-Se pueden intercambiar los ejes y la direccion.
+
+Eje Principal(Horizontal): se llama 'main axis'
+    Izq:main start | Der:main end
+
+Eje Secundario(Vertical): se llama 'cross axis'
+    Arriba:cross start | Abajo:cross end

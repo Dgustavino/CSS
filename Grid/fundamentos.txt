@@ -1,0 +1,23 @@
+                    GRID = Cuadricula
+
+-Es un modelo de layout(diseño) que permite construir Cuadriculas dinamicas(flexibles).
+-ES un valor de la propiedad display.
+-Tenemos display: grid y display: inline-grid para elementos de bloque y de linea respectivamente.
+-Se necesita un contenedor (grid-container) y al menos un hijo(grid-item).
+-Las celdas son los items, ellos pertenencen al contenedor(la tabla).
+
+Terminologia:
+    -Grid colum: Es cada columna de la Cuadricula.
+    -Grid row: Es cada fila.
+    -Grid cell: Es cada celda.
+    -Grid gap: Es la separación entre celdas.
+
+    -Grid line: Son las lineas que delimitan cada columna/fila.
+        -column lines.
+        -row lines.
+
+Ventajas:
+    -Cada celda es dinámica y el resto de la Cuadricula se adapta.
+    -Podemos decir donde empieza y donde acaba cada celda, tanto en columna como en fila.
+
+

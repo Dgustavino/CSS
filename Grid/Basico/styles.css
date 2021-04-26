@@ -1,0 +1,38 @@
+ /* GRID */
+
+ /* 
+    (colum)Columnas: de Arriba a Abajo
+    (row)Filas: de Izq a Der
+    (cell)Celdas: Contenido 
+*/
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    color: #eee;
+    font-family: sans-serif;
+    background-image: radial-gradient(circle, #b94bf8, #3a1957);
+    background-repeat: no-repeat;
+}
+
+.grid-container {
+    display: grid;
+    /*Indica el numero de columnas*/
+    grid-template-columns: 100px 50px 150px 10px;
+    /*Indica el numero de filas*/
+    grid-template-rows: 100px 120px 50px;
+    grid-column-gap: 10px; /*Separación entre columnas*/
+    grid-row-gap: 10px; /*Separación entre filas*/
+}
+
+.grid-item {
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 2rem;
+}
