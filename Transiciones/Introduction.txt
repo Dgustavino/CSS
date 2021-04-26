@@ -1,0 +1,42 @@
+            ¿QUE ES UNA ANIMACIÓN/TRANSICIÓN?
+
+Las animaciones/transiciones proporcionan una forma de interpolar valores de propiedades CSS cuando cambian como resultado de cambios subyacentes en las propiedades.
+
+Cuando el estado inicial y el estado final de una propiedad sucede en un periodo de tiempo(mas de 1 segundo), lo llamammos animación/transición.
+
+Cada uno de los cambios entre los estados inicial y final lo llamamos interpolación.
+
+Existe 1 diferencia principal entre que es una animacion y una transición.
+    *Animación: Sucede sola, el usuario no tiene que hacer nada.
+    *transición: Tiene que haber un evento que la dispare(ocupa una acción del usuario)
+
+
+FASES DE RENDERIZADO
+
+Cuando cambiamos una propiedad el navegador tiene que recalcular como dibuja los elementos.
+
+Existen 3 fases a la hora de ver elementos en pantalla:
+
+    -Layout: Cómo se colocan los elementos en pantalla(consume muchos recursos).
+    -Paint: Dibujar o pintar los píxeles de los elementos(tiene un consumo medio).
+    -Composite: Componer y dibujar los elementos en pantalla(Menor recurso de todos).
+
+
+PROPIEDADES ANIMABLES
+
+-No todas las propiedades CSS son animables.
+-Para animar una propiedad el navegador tiene que poder calcular estados intermedios.
+-Todas las propiedades numéricas con ESTADOS INTERMEDIOS son animables:
+    margin, padding, font-size, color...
+
+Página 'CSS Triggers' para ver la lista de lo que afecta las animaciones/transiciones en cada navegador.
+-Chrome: Blink.
+-FireFox: Gecko.
+-Safari: WebKit.
+-Edge: EdgeHTML
+
+Extensión Instalada de CSS Triggers que nos indica con flechas de colores el gasto de recursos de cada propiedad que usamos en el styles.css 
+
+->Verdes: No consume casi nada.
+->Amarillas: Consumo medio Acepatble.
+->Rojas: Mucho consumo de recursos.

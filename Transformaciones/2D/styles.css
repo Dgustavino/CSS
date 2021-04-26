@@ -1,0 +1,59 @@
+/* 
+  Las transformaciones pueden ser de dos tipos, 2D y 3D
+  Para ambas tenemos una sola propiedad que recibe funciones como valor.
+  Transformaciones 2D
+
+    transform:
+      translate(x | x, y) | translateX() | translateY()           'Traslada o mueve los elementos'
+        valores positivos-> se movera a la derecha y abajo
+        valores negativos-> se movera a la izquierda y arriba
+
+      scale(x = y | x,y) | scaleX() | scaleY()                 'Esconde o resalta(crece o decrece) los elementos'
+
+      skew(x | x,y) | skewX(angle) | skewY(angle)               'Deforma los elementos'
+
+      rotate(angle) -> Tenemos 4 formas de dar ángulos en CSS       'Rota los elementos'
+        deg (360deg) -> grados sexagesimales
+        grad (400grad)-> es una unidad de medida de ángulos planos
+        rad (6.2832rad)-> es una unidad de ángulo en el plano en el SI
+        turn (1turn) -> turn es el número de vueltas
+
+      Cuando usamos angulos:
+        valores positivos-> sentido horario
+        valores negativos-> sentido antihorario
+*/
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .box,
+  .box-2 {
+    width: 50px;
+    height: 50px;
+    background-color: royalblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 3rem; */
+    margin: 0 1rem;
+    color: white;
+    transition: transform 0.5s;
+    /* transition: left 0.5s;
+    position: relative; -> Con position gasta mas recursos que con transform.
+    left: 0; */
+  }
+  
+  .box:hover {
+    background-color: green;
+    color: black;
+    /* transform: translate(-100%, -100%); */
+    /* transform: scale(2); */
+    /* transform: rotate(180deg); */
+    transform: skew(20deg);
+    /* left: 25%; */
+  }
