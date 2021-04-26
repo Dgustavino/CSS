@@ -1,0 +1,29 @@
+/* Los navegadores vienen con estilos predefinidos de diseño(Margenes, Alineaciones, fuentes, etc... Por lo tanto con la descarga de normalize.css reseteamos esos estilos y le damos los propios con nuestro css y algunos otros precargados que trae normalize*/
+
+.square{
+    width: 100px; 
+    height: 100px;
+    padding: 20px;
+    border: 5px solid black;
+    background: red;
+}
+
+/*
+ width: Ancho
+ heigth: Alto
+ padding: Relleno(margen interno) despues del diseño|forma
+ border: Borde(margen externo) despues del padding
+ Top: Arriba | Bottom: Abajo | Left: Izq | Right: Der
+ Margin: margen
+ */
+
+
+ /* Se usa para que recalcule los padding y border y no aumenten la forma/figura */
+/* Porque si tenemos un figura de 100x100(ancho y alto) y le agregamos un padding de 20px y un border de 5px
+ese agregado se sumaria al tamaño total de la figura aumentando su tamaño normal, teniendo en total 125px */
+/* Por lo tanto con este metodo reduciria su tamaño de 100px a 75px para luego sumarle los 25px del padding y border, para asi no salirse de su tamaño antes declarado.(Asi recalcularia cada elemento que modifiquemos automaticamente */
+/* 
+*, *:before, *:after{
+    box-sizing: border-box;
+  } */
+/* Se usa en normalize.css */

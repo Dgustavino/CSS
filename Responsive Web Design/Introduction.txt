@@ -1,0 +1,44 @@
+**********************RESPONSIVE WEB DESIGN****************************
+
+No es un estandar, no es CSS. Es un conjunto de patrones de diseño(metodologia).
+Se aplica con CSS y JavaScript en su mayoria.
+Su objetivo es que cualquier pagina se vea bien independientemente del dispositivo.
+
+    Se basa en 3 conceptos fundamentales:
+        
+        *Columnas/Cajas fluidas: Aplicar anchos en % solo a los elementos que necesiten cambiar su tamaño.
+
+        *Imágenes flexibles: (max-width 100%) -> Ya lo vimos.
+
+        *Media Querys: Son condicionales para que el navegador sepa cómo actuar en función de las características del dispositivo.
+            *Tenemos:
+                    -all: Apto para todos los dispositivos.
+                    -print: Destinado a material impreso y visualizacion del modo de vista previa de impresión.
+                    -screen: Destinado principalmente a las pantallas(por ejemplo, un smartphone frente a pantallas de alta definición).
+                    -speech: Para sintetizadores de voz.
+
+        SINTAXIS: @media"tipo de medio" and|or(condición)
+             
+        Las condiciones mas utilizadas son: min-width, max width y orientation.
+
+         °@media screen and(min-width:360px)-> Sería para pantalla y con la condicion de un ancho minimo de 360px
+         °@media screen and(max-width:1024px) and (orientation:landscape)-> landscape= mas ancho que alto.
+         °@media screen and(max-width:480px) or (orientation:portrait)-> portrait= mas alto que ancho[Movil]
+
+
+        ++++++++++++++++++++++METODOLOGÍAS++++++++++++++++++++++++++++++
+
+        °Mobile-first: Consiste en hacer primero el diseño móvil e ir subiendo de tamaño.
+            1-Movil
+            2-Tablet
+            3-Portatil/laptop
+            4-Desktop
+            5-Pantallas(Monitores grandes o TV´s)
+
+        °Desktop-first: Lo contrario (Más recomendable usar °Mobile-first)
+
+        °Content-first: Consiste primero en maquetar y despues diseñar.(UI)
+
+
+
+-Hay FrameWorks como Boostrap, Materialize que lo hacen automatico, pero son pesados y es mejor aprender a hacerlos sin ellos para saber como funciona todo por detras.

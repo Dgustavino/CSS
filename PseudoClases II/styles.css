@@ -1,0 +1,58 @@
+.input,
+.label {
+    display: block;
+}
+
+/*
+PseudoClases para Formularios
+UI States
+    :enabled
+    :disabled
+    :checked
+    :in-range
+    :out-of-range
+    :required
+    :optional
+    :valid
+    :invalid
+    :read-only
+    :read-write
+*/
+
+.input:enabled {
+    background: red;
+}
+
+.input:disabled { /*Desactiva el campo*/
+    background: yellow;
+    border: none; /*Quita el borde*/
+}
+
+.input:checked + label{ /*Genera un evento de cambio de diseño en los label que incluyamos al hacer check pero  hay que darle 'display: block' a los elementos*/
+    font-size: 2em;
+}
+
+.input:in-range{ /*Hace un rango(min) para aplicar el diseño*/
+    background: green;
+}
+
+.input:out-of-range{ /*Hace un rango(max) para aplicar el diseño*/
+    background: blue;
+}
+
+.input:optional{ /*Cambia de diseño el campo opcional*/
+    background: purple;
+}
+
+.input:required{ /*Cambia de diseño el campo requerido*/
+                /*Se puede poner los mensajes de campo requerido(arriba del campo con before y abajo con after)*/
+    background: lightcoral;
+}
+
+.input:valid{ /*Comprueba que el campo sea valido(comprueba que sea numeros)(si ponen letras cambian de diseño)*/
+    background: green;
+}
+
+.input:invalid{ /*Comprueba que el campo sea invalido*/
+    background: red;
+}

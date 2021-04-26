@@ -1,0 +1,47 @@
+/* A los media query se les llama correctamente BreakPoints */
+/*
+       Breakpoints: Existen dos tipos de breakpoints, los major breakpoints y los minor breakpoints.
+
+        -Los major breakpoints son los que cambian la apariencia de la web de forma significativa.
+        -Los minor breakpoints son los que cambian una cosa específica para un elemento en concreto.
+
+        Medidas más comunes:
+            0 - 320px - 360px: Móviles portrait
+            480px - 640px - 768px: Móviles landscape - tablet
+            1024px - 1200px - 1400px - 1440px: tablets grandes, portátiles no HD
+            1920 - hacia arriba: Monitores y TV HD, 2k, 4k...
+*/
+
+.menu{
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    font-size: 3rem;
+}
+
+/* Primero se ponen los estilos por defecto o con el tamaño que quieras empezar, por ejemplo empezar con movil y despues los media querys para tablet, desktop y pantallas. */
+
+
+body{
+    background-color: royalblue; /*-> Movil*/
+}
+
+/*Dentro del media query se puede poner cualquier selector y cualquier propiedad*/
+
+@media screen and (min-width:480px){ /*->Tablet*/
+    body{
+        background-color: red;
+    }
+}
+
+@media screen and (min-width:1400px){ /*-> Desktop/Escritorio*/
+    body{
+        background-color: green;
+    }
+
+    .menu{
+        display: flex;
+        justify-content: space-around;
+    }
+}

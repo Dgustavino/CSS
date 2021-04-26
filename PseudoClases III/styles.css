@@ -1,0 +1,93 @@
+/*
+Structural
+    :root - Representa la raiz del documento (html) usando una pseudoclase tenemos más especificidad que si usáramos html
+
+    :root{} | :html{} -> Hacen lo mismo, pero por especifidad root tiene mas peso.(se usan con variables)
+
+    :empty - Esta pseudoclase se aplica para los elementos vacios, es decir, etiquetas que no tienen contenido
+    
+    -child
+        :first-child - Selecciona al primer hijo (independientemente del tipo de etiqueta)
+        :last-child - Selecciona al ultimo hijo (independientemente del tipo de etiqueta)
+        :nth-child(n) - Selecciona al hijo n(independientemente del tipo de etiqueta)
+        :nth-last-child(n) Selecciona al hijo n empezando a contar desde el último (independientemente del tipo de etiqueta)
+        :only-child Selecciona al hijo unico(independientemente del tipo de etiqueta)
+    
+    -type (Estos funcionan cuando hay elementos de otros tipos y queremos escoger uno del tipo necesario)
+        :first-of-type
+        :last-of-type
+        :nth-of-type()
+        :nth-last-of-type()
+        :only-of-type
+    Valores posibles:
+        odd - Impares
+        even - Pares
+        numeros enteros - 2,3,4...
+        equaciones (1n,3n,4n+1,n+4,...)
+            n es un multiplicador va de 0 hasta que se quede sin elementos
+    
+Negation
+    :not() - Selecciona al elemento que no cumpla la condición, se puede poner cualquier selector salvo otro :not
+*/
+
+.paragraph{
+    padding: .5em;
+    background:lightblue;
+}
+.paragraph:empty{ /*Se le aplicara a las etiquetas que no tengan contenido para evitar*/
+    all:unset; /*all: resetea todas las propiedades del elemento excepto:direction->para leer el texto de der a izq como el lenguaje arabe*/
+}
+
+.ej{
+    padding: .3em;
+    background-color: darkolivegreen;
+}
+
+/* .paragraph:first-child { /*Aplica el estilo al primer hijo 
+    background: red;
+}
+.paragraph:last-child { /*Aplica el estilo al ultimo hijo 
+    background: blue;
+} */
+
+/* .paragraph:nth-child(odd) { /*Selecciona un hijo especifico(odd:Impar)
+    background: lightcoral;
+}
+
+.paragraph:nth-child(even) { /*Selecciona un hijo especifico(even:par)
+    background: brown;
+} */
+
+ /* .paragraph:nth-child(3) { /*Selecciona un hijo especifico(En este caso pondria el diseño al parrafo 3)
+    background: cyan;
+}  */
+
+/* .paragraph:nth-child(3n) {
+    /* n primero vale 0, después 1, después 2 y por último 3 (3*0=0, 3*1=3, 3*2=6, 3*3=9 -> Cambiarian de diseño los parrafos 3,6,9)
+    background: lightcoral;
+} */
+
+/* .paragraph:nth-child(3n + 1) { (3*0=+1=1, 3*1=3+1=4, 3*2=6+1=7, 3*3=9+1=10)-> escogeria los parrafos 1,4,7,10
+    background: lightcoral;
+} */
+
+/* .paragraph:nth-child(n + 4) { (n es el contador: 0+4=4, 1+4=5, 2+4=6,etc....)
+    background: lightcoral;
+}
+ */
+
+/* .paragraph:nth-last-child(n+3) { (Igual pero lo hace desde el final | de abajo hacia arriba)
+    background: lightcoral;
+} */
+
+/* .paragraph:only-child{ (Funciona cuando solo hay un hijo unico)
+    background: lightseagreen;
+} */
+
+.paragraph:nth-of-type(3){ /*Escoge el tercer hijo de los paragraph aunque en el HTML el 3er hijo sea el div3*/
+    background: cyan;
+}
+
+/* .paragraph:not(div) { /*Podemos excluir la clase que no queramos aplicarle diseño
+    background: green;
+} */
